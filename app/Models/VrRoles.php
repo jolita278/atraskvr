@@ -2,11 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 class VrRoles extends CoreModel
 {
-
     /**
      * $table name DataBases
      */

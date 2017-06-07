@@ -6,7 +6,6 @@ namespace App\Models;
 
 class VrMenu extends CoreModel
 {
-
     /**
      * Database table name
      * @var string

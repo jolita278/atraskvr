@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class VrPermissions extends CoreModel
 {
-
     /**
      * $table name DataBases
      */
