@@ -36,4 +36,8 @@ class VrUsers extends Authenticatable
     {
         return $this->belongsToMany(VrRoles::class, 'vr_connections_users_roles', 'user_id', 'role_id');
     }
+    public function roles()
+    {
+        return $this->hasMany(VrConnUserRoles::class,  'user_id', 'id');
+    }
 }
