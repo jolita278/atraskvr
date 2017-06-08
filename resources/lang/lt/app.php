@@ -10,6 +10,7 @@ return [
     "languages" => "Kalbos",
     "menus" =>"Meniu",
     "is_active"=> "Yra aktyvus",
+    "languages_list" => "Kalbų sąrašas",
 
 
     "inspired_by" => "Parodą įkvepia:",

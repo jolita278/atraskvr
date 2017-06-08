@@ -10,6 +10,7 @@ return [
     "languages" => "Languages",
     "menus" =>"Menus",
     "is_active"=> "Is active",
+    "languages_list" => "Languages list",
 
 
     "inspired_by" => "Inspired by:",
