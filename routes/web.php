@@ -75,7 +75,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'NotAdminRestriction
         Route::group(['prefix' => '{id}'], function () {
             Route::get('/', ['as' => 'app.languages.show', 'uses' => 'VrLanguageCodesController@adminShow']);
             Route::get('/edit', ['as' => 'app.languages.edit', 'uses' => 'VrLanguageCodesController@adminEdit']);
-            Route::post('/edit', ['as' => 'app.languages.update','uses' => 'VrLanguageCodesController@adminUpdate']);
+            Route::post('/edit', ['uses' => 'VrLanguageCodesController@adminUpdate']);
             Route::delete('/delete', ['as' => 'app.languages.destroy', 'uses' => 'VrLanguageCodesController@adminDestroy']);
         });
     });

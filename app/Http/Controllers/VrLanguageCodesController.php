@@ -17,7 +17,7 @@ class VrLanguageCodesController extends Controller
         $configuration ['listName'] = trans('app.languages_list');
         $configuration ['ignore'] = '';
         $configuration ['list'] = VrLanguageCodes::get()->toArray();
-        $configuration ['call_to_action'] = 'app.languages.update';
+        $configuration ['call_to_action'] = 'app.languages.edit';
         return view('admin.adminList', $configuration);
     }
 
@@ -65,7 +65,8 @@ class VrLanguageCodesController extends Controller
      */
     public function adminEdit($id)
     {
-        //
+//        dd($id);
+        return json_encode(["success" => true, "id" => $id]);
     }
 
     /**
@@ -77,7 +78,7 @@ class VrLanguageCodesController extends Controller
      */
     public function adminUpdate($id)
     {
-        dd(request($id));
+
 	}
 
     /**

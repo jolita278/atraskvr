@@ -5,7 +5,7 @@
         <div class="container">
 
             <h2> {{$listName}}</h2>
-            {{--<div>@include('error-notification')</div>--}}
+
             <table class="table table-hover">
                 @if(isset($url))
                     <a href="{{$url}}" class="btn btn-primary" role="button">
@@ -31,19 +31,19 @@
                                     @if($key == 'is_active')
                                         @if($value == 1)
 
-                                            <a onclick="update('{{route($call_to_action, $record['id'])}}')"
-                                               class="btn btn-success btn-sm" style="display :none">{{trans('app.activate')}}</a>
+                                            <a onclick="enableDisableLanguage('{{route($call_to_action, $record['id']), $record['is_active']}}')"
+                                               class="btn btn-success btn-sm" style="display :none;">{{trans('app.activate')}}</a>
 
-                                            <a href="{{route($call_to_action, $record['id'])}}"
+                                            <a onclick="enableDisableLanguage('{{route($call_to_action, $record['id']), $record['is_active']}}')"
                                                class="btn btn-danger btn-sm">{{trans('app.deactivate')}}</a>
 
                                         @else
 
-                                            <a onclick="update('{{route($call_to_action, $record['id'])}}')"
+                                            <a onclick="enableDisableLanguage('{{route($call_to_action, $record['id']), $record['is_active']}}')"
                                                class="btn btn-success btn-sm">{{trans('app.activate')}}</a>
 
-                                            <a href="{{route($call_to_action, $record['id'])}}"
-                                               class="btn btn-danger btn-sm" style="display :none">{{trans('app.deactivate')}}</a>
+                                            <a onclick="enableDisableLanguage('{{route($call_to_action, $record['id']), $record['is_active']}}')"
+                                               class="btn btn-danger btn-sm" style="display :none;">{{trans('app.deactivate')}}</a>
 
                                         @endif
 
@@ -79,13 +79,14 @@
             }
         });
 
-        function deleteItem(route) {
+        function enableDisableLanguage(route)
+        {
             $.ajax({
                 url: route,
                 dataType: 'json',
-                type: 'DELETE',
+                type: 'POST',
                 success: function () {
-                    alert('DELETED');
+                    alert('UPDATED');
                 },
                 error: function () {
                     alert('ERROR');
@@ -94,4 +95,5 @@
         }
 
     </script>
+
 @endsection
