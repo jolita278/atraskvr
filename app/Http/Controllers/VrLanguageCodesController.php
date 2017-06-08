@@ -13,11 +13,13 @@ class VrLanguageCodesController extends Controller {
 	 */
 	public function adminIndex()
 	{
-        $configuration ['listName'] = 'Languages list';
+        $configuration ['listName'] = trans('app.languages_list');
         $configuration ['ignore'] = '';
+        $configuration ['is_active'] = '';
         $configuration ['list'] = VrLanguageCodes::get()->toArray();
         return view('admin.adminList', $configuration);
 	}
+
 
 	/**
 	 * Show the form for creating a new resource.
