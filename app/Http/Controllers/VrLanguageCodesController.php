@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Models\VrLanguageCodes;
 use Illuminate\Routing\Controller;
 
 class VrLanguageCodesController extends Controller {
@@ -10,9 +11,12 @@ class VrLanguageCodesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function adminIndex()
 	{
-		//
+        $configuration ['listName'] = 'Languages list';
+        $configuration ['ignore'] = '';
+        $configuration ['list'] = VrLanguageCodes::get()->toArray();
+        return view('admin.adminList', $configuration);
 	}
 
 	/**
@@ -21,7 +25,7 @@ class VrLanguageCodesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function adminCreate()
 	{
 		//
 	}
@@ -32,7 +36,7 @@ class VrLanguageCodesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function adminStore()
 	{
 		//
 	}
@@ -44,7 +48,7 @@ class VrLanguageCodesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function adminShow($id)
 	{
 		//
 	}
@@ -56,7 +60,7 @@ class VrLanguageCodesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function adminEdit($id)
 	{
 		//
 	}
@@ -68,7 +72,7 @@ class VrLanguageCodesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function adminUpdate($id)
 	{
 		//
 	}
@@ -80,7 +84,7 @@ class VrLanguageCodesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function adminDestroy($id)
 	{
 		//
 	}

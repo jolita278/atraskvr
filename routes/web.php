@@ -68,6 +68,17 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'NotAdminRestriction
             Route::delete('/delete', ['as' => 'app.pages.destroy', 'uses' => 'VrPagesController@destroy']);
         });
     });
+    Route::group(['prefix' => 'languages'], function () {
+        Route::get('/', ['as' => 'app.languages.index', 'uses' => 'VrLanguageCodesController@adminIndex']);
+        Route::get('/create', ['as' => 'app.languages.create', 'uses' => 'VrLanguageCodesController@adminCreate']);
+        Route::post('/create', ['uses' => 'VrLanguageCodesController@adminStore']);
+        Route::group(['prefix' => '{id}'], function () {
+            Route::get('/', ['as' => 'app.languages.show', 'uses' => 'VrLanguageCodesController@adminShow']);
+            Route::get('/edit', ['as' => 'app.languages.edit', 'uses' => 'VrLanguageCodesController@adminEdit']);
+            Route::post('/edit', ['uses' => 'VrLanguageCodesController@adminUpdate']);
+            Route::delete('/delete', ['as' => 'app.languages.destroy', 'uses' => 'VrLanguageCodesController@adminDestroy']);
+        });
+    });
 
     Route::group(['prefix' => 'categories'], function () {
         Route::get('/', ['as' => 'app.categories.index', 'uses' => 'VrCategoriesController@index']);
