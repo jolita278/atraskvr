@@ -9,9 +9,10 @@ return [
     "users" => "Vartotojai",
     "languages" => "Kalbos",
     "menus" =>"Meniu",
-    "is_active"=> "Yra aktyvus",
+    "activate"=> "Aktyvuoti",
+    "deactivate"=> "Deaktyvuoti",
     "languages_list" => "Kalbų sąrašas",
-
+    "no_items" => "Nėra įrašų duomenų bazėje!",
 
     "inspired_by" => "Parodą įkvepia:",
     "main_title" => "Atrask VR",

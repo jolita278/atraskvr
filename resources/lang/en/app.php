@@ -9,9 +9,10 @@ return [
     "users" => "Users",
     "languages" => "Languages",
     "menus" =>"Menus",
-    "is_active"=> "Is active",
+    "activate"=> "Activate",
+    "deactivate"=> "Deactivate",
     "languages_list" => "Languages list",
-
+    "no_items" => "No records in database!",
 
     "inspired_by" => "Inspired by:",
     "main_title" => "Discover VR",
