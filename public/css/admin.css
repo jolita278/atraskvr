@@ -1,0 +1,30 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#menu {
+    background-color: #1a2226;
+    float: left;
+    width: 230px;
+    height: 100%;
+    position: fixed;
+    text-align: left;
+    color: #b8c7ce;
+    min-height: 100vh;
+    padding: 0 30px;
+}
+
+#menu a {
+    color: #a7b1c2;
+    font-size: 17px;
+    line-height: 27px;
+}
+
+#list {
+    float: right;
+    width: 100%;
+    padding-left: 270px;
+    background-color: #f3f3f4;
+    min-height: 120vh;
+}
