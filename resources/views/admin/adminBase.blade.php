@@ -2,7 +2,7 @@
 <html lang="{{ config('app.locale') }}">
 
 <head>
-    <link href="/css/app.css" rel=stylesheet>
+    @include('admin.adminCSS')
 
 </head>
 <body>

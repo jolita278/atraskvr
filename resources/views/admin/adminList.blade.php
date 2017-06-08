@@ -1,8 +1,9 @@
 @extends('admin.adminBase')
 
 @section('adminList')
-    <div class="main">
+    <div id="list">
     <div class="container">
+
         <h2> {{$listName}}</h2>
         {{--<div>@include('error-notification')</div>--}}
         <table class="table table-hover">
@@ -87,7 +88,7 @@
                                    class="btn btn-info btn-sm">Delete</a>
                             </td>
                         @endif
-                            @if(isset($active))
+                            @if(isset($is_active))
 
                                 <td><a href="{{''}}"
                                        class="btn btn-info btn-sm">{{trans('app.is_active')}}</a>
