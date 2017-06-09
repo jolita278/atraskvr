@@ -10,7 +10,7 @@ class VrLanguageCodes extends Model
 
     public $incrementing = false;
 
-    public $updated_at = false;
+    public $timestamps = false;
     /**
      * Database table name
      * @var string

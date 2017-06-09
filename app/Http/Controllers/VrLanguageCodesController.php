@@ -65,8 +65,7 @@ class VrLanguageCodesController extends Controller
      */
     public function adminEdit($id)
     {
-//        dd($id);
-        return json_encode(["success" => true, "id" => $id]);
+//
     }
 
     /**
@@ -78,6 +77,11 @@ class VrLanguageCodesController extends Controller
      */
     public function adminUpdate($id)
     {
+        $record = VrLanguageCodes::find($id);
+        $data = request()->all();
+        $record->update($data);
+
+        return json_encode(["success" => true]);
 
 	}
 

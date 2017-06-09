@@ -31,18 +31,18 @@
                                     @if($key == 'is_active')
                                         @if($value == 1)
 
-                                            <a onclick="toggleActive('{{route($call_to_action, $record['id']), 1}}')"
+                                            <a onclick="toggleActive('{{route($call_to_action, $record['id'])}}',1)"
                                                class="btn btn-success btn-sm" style="display :none;">{{trans('app.activate')}}</a>
 
-                                            <a onclick="toggleActive('{{route($call_to_action, $record['id']), 0}}')"
+                                            <a onclick="toggleActive('{{route($call_to_action, $record['id'])}}',0)"
                                                class="btn btn-danger btn-sm">{{trans('app.deactivate')}}</a>
 
                                         @else
 
-                                            <a onclick="toggleActive('{{route($call_to_action, $record['id']), 1}}')"
+                                            <a onclick="toggleActive('{{route($call_to_action, $record['id'])}}',1)"
                                                class="btn btn-success btn-sm">{{trans('app.activate')}}</a>
 
-                                            <a onclick="toggleActive('{{route($call_to_action, $record['id']), 0}}')"
+                                            <a onclick="toggleActive('{{route($call_to_action, $record['id'])}}',0)"
                                                class="btn btn-danger btn-sm" style="display :none;">{{trans('app.deactivate')}}</a>
 
                                         @endif
@@ -81,12 +81,16 @@
 
         function toggleActive(url, value)
         {
+//         console.log(url, value)
             $.ajax({
-
-                dataType: 'json',
+                url:url,
                 type: 'POST',
-                success: function () {
-                    alert('UPDATED');
+                data:{
+                    is_active:value
+                },
+
+                success: function (responce) {
+                    console.log(responce)
                 },
                 error: function () {
                     alert('ERROR');
