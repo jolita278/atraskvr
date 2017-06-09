@@ -81,7 +81,7 @@ class VrLanguageCodesController extends Controller
         $data = request()->all();
         $record->update($data);
 
-        return json_encode(["success" => true]);
+        return $record;
 
 	}
 

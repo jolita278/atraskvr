@@ -14,7 +14,7 @@
                 @endif
                 @if(sizeof($list)>0)
                     <thead>
-                    <tr>
+                    <tr >
                         @foreach($list[0] as $key => $value)
                             <th>{{$key}}</th>
                         @endforeach
@@ -24,7 +24,9 @@
                     </thead>
                     <tbody>
                     @foreach ($list as $key => $record)
-                        <tr>
+
+                        <tr id="{{$record['id']}}">
+
                             @foreach ($record as $key => $value)
 
                                 <td>
@@ -32,7 +34,8 @@
                                         @if($value == 1)
 
                                             <a onclick="toggleActive('{{route($call_to_action, $record['id'])}}',1)"
-                                               class="btn btn-success btn-sm" style="display :none;">{{trans('app.activate')}}</a>
+                                               class="btn btn-success btn-sm"
+                                               style="display :none;">{{trans('app.activate')}}</a>
 
                                             <a onclick="toggleActive('{{route($call_to_action, $record['id'])}}',0)"
                                                class="btn btn-danger btn-sm">{{trans('app.deactivate')}}</a>
@@ -43,7 +46,8 @@
                                                class="btn btn-success btn-sm">{{trans('app.activate')}}</a>
 
                                             <a onclick="toggleActive('{{route($call_to_action, $record['id'])}}',0)"
-                                               class="btn btn-danger btn-sm" style="display :none;">{{trans('app.deactivate')}}</a>
+                                               class="btn btn-danger btn-sm"
+                                               style="display :none;">{{trans('app.deactivate')}}</a>
 
                                         @endif
 
@@ -79,19 +83,40 @@
             }
         });
 
-        function toggleActive(url, value)
-        {
+        function toggleActive(url, value) {
 //         console.log(url, value)
             $.ajax({
-                url:url,
+                url: url,
                 type: 'POST',
-                data:{
-                    is_active:value
+                data: {
+                    is_active: value
                 },
 
                 success: function (responce) {
-                    console.log(responce)
-                },
+
+//                    console.log(responce.is_active)
+//                    console.log( $('#'+ responce.id))
+//                    $('#'+responce.id)
+//                    $('#'+ responce.id).css({
+//                        opacity:0.5,
+//                        backgroundColor:"red"
+//                    })
+//                    $('#'+ responce.id).addClass()
+//                    $('#'+ responce.id).removeClass()
+//                    $('#'+ responce.id).addClass().removeClass().attr()
+//                    console.log($('#'+ responce.id).find('a'))
+                    var $danger = $('#'+ responce.id).find('.btn-danger')
+                    var $success = $('#'+ responce.id).find('.btn-success')
+
+                    if (responce.is_active === '1') {
+                        $danger.show()
+                        $success.hide()
+                    }
+                    else{
+                        $danger.hide();
+                        $success.show()
+                    }
+                        },
                 error: function () {
                     alert('ERROR');
                 }
