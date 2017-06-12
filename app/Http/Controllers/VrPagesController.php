@@ -33,7 +33,7 @@ class VrPagesController extends Controller {
 	 */
 	public function adminCreate()
 	{
-
+        return view('admin.adminForm');
 	}
 
 	/**

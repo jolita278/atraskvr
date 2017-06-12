@@ -33,7 +33,7 @@ class VrResourcesController extends Controller {
 	 */
 	public function adminCreate()
 	{
-		//
+        return view('admin.adminForm');
 	}
 
 	/**

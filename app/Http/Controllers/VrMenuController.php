@@ -23,7 +23,7 @@ class VrMenuController extends Controller
     {
         $configuration ['title'] = trans('app.menu_list');
         $configuration ['list'] = VrMenu::get()->toArray();
-        $configuration ['new'] = url('admin/menus/create');
+        $configuration ['new'] = url('admin/menu/create');
         return view('admin.adminList', $configuration);
     }
 
@@ -35,7 +35,7 @@ class VrMenuController extends Controller
      */
     public function adminCreate()
     {
-
+        return view('admin.adminForm');
     }
 
     /**
