@@ -21,6 +21,8 @@ return [
     "orders_list" => "Orders list",
     "menu_list" => "Menu list",
     "resources_list" => "Resources list",
+    "new_record" => "New record",
+    "submit" => "Submit",
 
     "inspired_by" => "Inspired by:",
     "main_title" => "Discover VR",

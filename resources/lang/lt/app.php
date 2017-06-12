@@ -21,6 +21,8 @@ return [
     "orders_list" => "Užsakymų sąrašas",
     "menu_list" => "Meniu sąrašas",
     "resources_list" => "Failų sąrašas",
+    "new_record" => "Naujas įrašas",
+    "submit" => "Patvirtinti",
 
 
     "inspired_by" => "Parodą įkvepia:",
