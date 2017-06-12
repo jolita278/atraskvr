@@ -15,7 +15,6 @@ class VrLanguageCodesController extends Controller
     public function adminIndex()
     {
         $configuration ['listName'] = trans('app.languages_list');
-        $configuration ['ignore'] = '';
         $configuration ['list'] = VrLanguageCodes::get()->toArray();
         $configuration ['call_to_action'] = 'app.languages.edit';
         return view('admin.adminList', $configuration);
