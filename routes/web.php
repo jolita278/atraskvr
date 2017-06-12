@@ -24,10 +24,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 //});
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'NotAdminRestriction']], function () {
+    Route::get('/', ['as' => 'app.categories.index', 'uses' => 'VrCategoriesController@index']);
 
-//    Route::get('/', function () {
-//        return view('base');
-//    });
 
     Route::group(['prefix' => 'menu'], function () {
 

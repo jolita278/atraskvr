@@ -7,9 +7,9 @@
             <h2> {{$listName}}</h2>
 
             <table class="table table-hover">
-                @if(isset($url))
-                    <a href="{{$url}}" class="btn btn-primary" role="button">
-                        Add new</a>
+                @if(isset($new))
+                    <a href="{{$new}}" class="btn btn-primary" role="button">
+                        {{trans('app.add_new')}}</a>
                     <hr/>
                 @endif
                 @if(sizeof($list)>0)

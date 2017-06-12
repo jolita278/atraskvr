@@ -12,7 +12,9 @@ return [
     "activate"=> "Aktyvuoti",
     "deactivate"=> "Deaktyvuoti",
     "languages_list" => "Kalbų sąrašas",
+    "categories_list" => "Kategorijų sąrašas",
     "no_items" => "Nėra įrašų duomenų bazėje!",
+    "add_new" => "Pridėti naują",
 
     "inspired_by" => "Parodą įkvepia:",
     "main_title" => "Atrask VR",
