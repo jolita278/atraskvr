@@ -16,7 +16,7 @@ class VrCategories extends CoreModel
      * Fillable column names
      * @var array
      */
-    protected $fillable = ['id', 'comment'];
+    protected $fillable = ['id'];
 
 
 }
