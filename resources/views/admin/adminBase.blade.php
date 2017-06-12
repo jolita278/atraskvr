@@ -13,6 +13,8 @@
 </aside>
 <main>
     @yield('adminList')
+    @yield('adminForm')
+
 </main>
 
 </body>
