@@ -6,9 +6,6 @@ use Ramsey\Uuid\Uuid;
 
 class VrCategoriesController extends Controller {
 
-
-
-
 	/**
 	 * Display a listing of the resource.
 	 * GET /vrcategories
@@ -16,9 +13,9 @@ class VrCategoriesController extends Controller {
 	 * @return Response
      *
 	 */
-	public function index()
+	public function adminIndex()
 	{
-        $configuration ['listName'] = trans('app.categories_list');
+        $configuration ['title'] = trans('app.categories_list');
         $configuration ['list'] = VrCategories::get()->toArray();
         $configuration ['new'] = url('admin/categories/create');
         return view('admin.adminList', $configuration);
@@ -30,7 +27,7 @@ class VrCategoriesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function adminCreate()
 	{
 
 	}
@@ -41,7 +38,7 @@ class VrCategoriesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function adminStore()
 	{
 	    //
 	}
@@ -53,7 +50,7 @@ class VrCategoriesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function adminShow($id)
 	{
         //
 	}
@@ -65,7 +62,7 @@ class VrCategoriesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function adminEdit($id)
 	{
        //
 	}
@@ -77,7 +74,7 @@ class VrCategoriesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function adminUpdate($id)
 	{
        //
 	}
@@ -89,7 +86,7 @@ class VrCategoriesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function adminDestroy($id)
 	{
         //
 	}

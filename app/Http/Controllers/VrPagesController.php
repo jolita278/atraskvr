@@ -16,9 +16,12 @@ class VrPagesController extends Controller {
 	 * @return Response
 	 */
 
-	public function index()
+	public function adminIndex()
 	{
-
+        $configuration ['title'] = trans('app.pages_list');
+        $configuration ['list'] = VrPages::get()->toArray();
+        $configuration ['new'] = url('admin/pages/create');
+        return view('admin.adminList', $configuration);
 	}
 
 
@@ -28,7 +31,7 @@ class VrPagesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function adminCreate()
 	{
 
 	}
@@ -39,7 +42,7 @@ class VrPagesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function adminStore()
 	{
 
     }
@@ -51,7 +54,7 @@ class VrPagesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function adminShow($id)
 	{
 
 	}
@@ -63,7 +66,7 @@ class VrPagesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function adminEdit($id)
 	{
 
 	}
@@ -75,7 +78,7 @@ class VrPagesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function adminUpdate($id)
 	{
 
 	}
@@ -87,7 +90,7 @@ class VrPagesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function adminDestroy($id)
 	{
 
 	}

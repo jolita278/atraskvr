@@ -15,6 +15,12 @@ return [
     "categories_list" => "Categories list",
     "no_items" => "No records in database!",
     "add_new" => "Add new",
+    "users_list" => "Users list",
+    "reservations_list" => "Reservations list",
+    "pages_list" => "Pages list",
+    "orders_list" => "Orders list",
+    "menu_list" => "Menu list",
+    "resources_list" => "Resources list",
 
     "inspired_by" => "Inspired by:",
     "main_title" => "Discover VR",

@@ -19,9 +19,12 @@ class VrMenuController extends Controller
      *
      * @return Response
      */
-    public function index()
+    public function adminIndex()
     {
-        return view('welcome');
+        $configuration ['title'] = trans('app.menu_list');
+        $configuration ['list'] = VrMenu::get()->toArray();
+        $configuration ['new'] = url('admin/menus/create');
+        return view('admin.adminList', $configuration);
     }
 
     /**
@@ -30,7 +33,7 @@ class VrMenuController extends Controller
      *
      * @return Response
      */
-    public function create()
+    public function adminCreate()
     {
 
     }
@@ -43,7 +46,7 @@ class VrMenuController extends Controller
      */
 
 
-    public function store()
+    public function adminStore()
     {
 //
     }
@@ -55,7 +58,7 @@ class VrMenuController extends Controller
      * @param  int $id
      * @return Response
      */
-    public function show($id)
+    public function adminShow($id)
     {
 
     }
@@ -67,7 +70,7 @@ class VrMenuController extends Controller
      * @param  int $id
      * @return Response
      */
-    public function edit($id)
+    public function adminEdit($id)
     {
 
     }
@@ -79,7 +82,7 @@ class VrMenuController extends Controller
      * @param  int $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function adminUpdate(Request $request, $id)
     {
 
     }
@@ -91,7 +94,7 @@ class VrMenuController extends Controller
      * @param  int $id
      * @return Response
      */
-    public function destroy($id)
+    public function adminDestroy($id)
     {
 
 

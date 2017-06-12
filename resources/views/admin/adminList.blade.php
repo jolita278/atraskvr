@@ -4,7 +4,7 @@
     <div id="list">
         <div class="container">
 
-            <h2> {{$listName}}</h2>
+            <h2> {{$title}}</h2>
 
             <table class="table table-hover">
                 @if(isset($new))

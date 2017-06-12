@@ -14,9 +14,11 @@ class VrUsersController extends Controller
      *
      * @return Response
      */
-    public function index()
+    public function adminIndex()
     {
-
+        $configuration ['title'] = trans('app.users_list');
+        $configuration ['list'] = VrUsers::get()->toArray();
+        return view('admin.adminList', $configuration);
     }
 
     /**
@@ -25,7 +27,7 @@ class VrUsersController extends Controller
      *
      * @return Response
      */
-    public function create()
+    public function adminCreate()
     {
     }
 
@@ -35,7 +37,7 @@ class VrUsersController extends Controller
      *
      * @return Response
      */
-    public function store()
+    public function adminStore()
     {
 
     }
@@ -47,7 +49,7 @@ class VrUsersController extends Controller
      * @param  int $id
      * @return Response
      */
-    public function show($id)
+    public function adminShow($id)
     {
     }
 
@@ -58,7 +60,7 @@ class VrUsersController extends Controller
      * @param  int $id
      * @return Response
      */
-    public function edit($id)
+    public function adminEdit($id)
     {
 
     }
@@ -70,7 +72,7 @@ class VrUsersController extends Controller
      * @param  int $id
      * @return Response
      */
-    public function update($id)
+    public function adminUpdate($id)
     {
 
     }
@@ -82,7 +84,7 @@ class VrUsersController extends Controller
      * @param  int $id
      * @return Response
      */
-    public function destroy($id)
+    public function adminDestroy($id)
     {
         //
     }

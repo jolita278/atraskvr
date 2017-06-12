@@ -16,9 +16,11 @@ class VrOrderController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function adminIndex()
 	{
-
+        $configuration ['title'] = trans('app.orders_list');
+        $configuration ['list'] = VrOrder::get()->toArray();
+        return view('admin.adminList', $configuration);
 	}
 
 
@@ -28,7 +30,7 @@ class VrOrderController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function adminCreate()
 	{
 
 
@@ -41,7 +43,7 @@ class VrOrderController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function adminStore()
 	{
 
 
@@ -54,7 +56,7 @@ class VrOrderController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function adminShow($id)
 	{
 
 	}
@@ -66,7 +68,7 @@ class VrOrderController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function adminEdit($id)
 	{
 		//
 	}
@@ -78,7 +80,7 @@ class VrOrderController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function adminUpdate($id)
 	{
 		//
 	}
@@ -90,7 +92,7 @@ class VrOrderController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function adminDestroy($id)
 	{
 		//
 	}
