@@ -3,7 +3,7 @@
 @section('adminForm')
     <div class="container">
 
-        <h2>{{trans('app.new_record')}}{{$title}}</h2>
+        <h2>{{$title_name}}{{$title}}</h2>
 
         {!! Form::open(['url' => $url]) !!}
 

@@ -20,7 +20,7 @@ class VrCategoriesController extends Controller
     {
         $configuration ['title'] = trans('app.categories_list');
         $configuration ['list'] = VrCategories::get()->toArray();
-        $configuration ['new'] = url('admin/categories/create');
+        $configuration ['new'] = route('app.categories.create');
         return view('admin.adminList', $configuration);
     }
 
@@ -32,20 +32,10 @@ class VrCategoriesController extends Controller
      */
     public function adminCreate()
     {
-        $configuration['fields'][] = [
-            "type" => "drop_down",
-            "key" => "language_code",
-            "options" => getActiveLanguage(),
-            "label" => trans('app.languages')
-        ];
-        $configuration['fields'][] = [
-            "type" => "single_line",
-            "key" => "name",
-            "label" => trans('app.name')
-        ];
+        $configuration = $this->getFormFieldData();
+        $configuration ['title_name'] = trans('app.new_record');
         $configuration ['title'] = trans('app.categories');
-        $configuration ['url'] = url('admin/categories/create');
-
+        $configuration ['url'] = route('app.categories.create');
         return view('admin.adminForm', $configuration);
     }
 
@@ -61,7 +51,7 @@ class VrCategoriesController extends Controller
         $data['record_id'] = (VrCategories::create())->id;
         VrCategoriesTranslations::create($data);
 
-        return redirect(route('app.categories.edit',  $data['record_id']));
+        return redirect(route('app.categories.edit', $data['record_id']));
     }
 
     /**
@@ -85,7 +75,12 @@ class VrCategoriesController extends Controller
      */
     public function adminEdit($id)
     {
-        //
+        $configuration = $this->getFormFieldData();
+        $configuration ['url'] = route('app.categories.edit', $id);
+        $configuration ['title_name'] = trans('app.edit_record');
+        $configuration ['title'] = trans('app.categories');
+
+        return view('admin.adminForm', $configuration);
     }
 
     /**
@@ -110,6 +105,22 @@ class VrCategoriesController extends Controller
     public function adminDestroy($id)
     {
         //
+    }
+
+    public function getFormFieldData()
+    {
+        $configuration['fields'][] = [
+            "type" => "drop_down",
+            "key" => "language_code",
+            "options" => getActiveLanguage(),
+            "label" => trans('app.languages')
+        ];
+        $configuration['fields'][] = [
+            "type" => "single_line",
+            "key" => "name",
+            "label" => trans('app.name')
+        ];
+        return $configuration;
     }
 
 

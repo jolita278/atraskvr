@@ -24,6 +24,7 @@ return [
     "new_record" => "New record: ",
     "submit" => "Submit",
     "name" => "Name",
+    "edit_record" => "Edit: ",
 
     "inspired_by" => "Inspired by:",
     "main_title" => "Discover VR",

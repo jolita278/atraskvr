@@ -24,6 +24,7 @@ return [
     "new_record" => "Naujas įrašas: ",
     "submit" => "Patvirtinti",
     "name" => "Pavadinimas",
+    "edit_record" => "Koreguoti: ",
 
 
     "inspired_by" => "Parodą įkvepia:",
