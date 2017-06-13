@@ -80,6 +80,9 @@ class VrCategoriesController extends Controller
         $configuration ['title_name'] = trans('app.edit_record');
         $configuration ['title'] = trans('app.categories');
 
+        $record = VrCategories::find($id)->toArray();
+
+
         return view('admin.adminForm', $configuration);
     }
 
@@ -107,6 +110,11 @@ class VrCategoriesController extends Controller
         //
     }
 
+    /**
+     * Get form fields data
+     *
+     * @return mixed
+     */
     public function getFormFieldData()
     {
         $configuration['fields'][] = [

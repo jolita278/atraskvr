@@ -14,7 +14,7 @@
                 @endif
                 @if(sizeof($list)>0)
                     <thead>
-                    <tr >
+                    <tr>
                         @foreach($list[0] as $key => $value)
                             <th>{{$key}}</th>
                         @endforeach
@@ -30,6 +30,7 @@
                             @foreach ($record as $key => $value)
 
                                 <td>
+
                                     @if($key == 'is_active')
                                         @if($value == 1)
 
@@ -50,6 +51,9 @@
                                                style="display :none;">{{trans('app.deactivate')}}</a>
 
                                         @endif
+                                    @elseif($key == 'translation')
+
+                                        {{$value['name']. ' '.$value['language_code'] }}
 
                                     @else
 
@@ -105,18 +109,18 @@
 //                    $('#'+ responce.id).removeClass()
 //                    $('#'+ responce.id).addClass().removeClass().attr()
 //                    console.log($('#'+ responce.id).find('a'))
-                    var $danger = $('#'+ responce.id).find('.btn-danger')
-                    var $success = $('#'+ responce.id).find('.btn-success')
+                    var $danger = $('#' + responce.id).find('.btn-danger')
+                    var $success = $('#' + responce.id).find('.btn-success')
 
                     if (responce.is_active === '1') {
                         $danger.show()
                         $success.hide()
                     }
-                    else{
+                    else {
                         $danger.hide();
                         $success.show()
                     }
-                        },
+                },
                 error: function () {
                     alert('ERROR');
                 }
