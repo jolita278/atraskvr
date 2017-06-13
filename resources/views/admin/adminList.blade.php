@@ -63,6 +63,18 @@
                                 </td>
                             @endforeach
 
+                                @if(isset($edit))
+
+                                    <td><a href="{{route($edit, [$record['id'], app()->getLocale()])}}"
+                                           class="btn btn-default btn-sm">{{trans('app.edit_record')}}</a>
+                                    </td>
+                                @endif
+                                @if(isset($showDelete))
+
+                                    <td><a onclick="deleteItem('{{route($showDelete, $record['id'])}}')"
+                                           class="btn btn-info btn-sm">{{trans('app.delete')}}</a>
+                                    </td>
+                                @endif
 
                         </tr>
 
@@ -86,6 +98,21 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
+
+        function deleteItem(route) {
+            $.ajax({
+                url: route,
+                dataType: 'json',
+                type: 'DELETE',
+                success: function () {
+                    alert('DELETED');
+                    location.reload();
+                },
+                error: function () {
+                    alert('ERROR');
+                }
+            });
+        }
 
         function toggleActive(url, value) {
 //         console.log(url, value)

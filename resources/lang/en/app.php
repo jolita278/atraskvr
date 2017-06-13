@@ -25,6 +25,8 @@ return [
     "submit" => "Submit",
     "name" => "Name",
     "edit_record" => "Edit: ",
+    "delete" => "Delete",
+    "back_to_list" => "Back to list",
 
     "inspired_by" => "Inspired by:",
     "main_title" => "Discover VR",

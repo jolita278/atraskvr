@@ -25,6 +25,8 @@ return [
     "submit" => "Patvirtinti",
     "name" => "Pavadinimas",
     "edit_record" => "Koreguoti: ",
+    "delete" => "Ištrinti",
+    "back_to_list" => "Grįžti į sąrašą",
 
 
     "inspired_by" => "Parodą įkvepia:",

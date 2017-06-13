@@ -20,7 +20,10 @@ class VrCategoriesController extends Controller
     {
         $configuration ['title'] = trans('app.categories_list');
         $configuration ['list'] = VrCategories::get()->toArray();
+
         $configuration ['new'] = route('app.categories.create');
+        $configuration ['edit'] = 'app.categories.edit';
+        $configuration ['showDelete'] ='app.categories.destroy';
         return view('admin.adminList', $configuration);
     }
 
@@ -36,6 +39,7 @@ class VrCategoriesController extends Controller
         $configuration ['title_name'] = trans('app.new_record');
         $configuration ['title'] = trans('app.categories');
         $configuration ['url'] = route('app.categories.create');
+        $configuration ['back_to_list'] = route('app.categories.index');
         return view('admin.adminForm', $configuration);
     }
 
@@ -79,9 +83,10 @@ class VrCategoriesController extends Controller
         $configuration ['url'] = route('app.categories.edit', $id);
         $configuration ['title_name'] = trans('app.edit_record');
         $configuration ['title'] = trans('app.categories');
+        $configuration['back_to_list'] = route('app.categories.index');
 
-        $record = VrCategories::find($id)->toArray();
-
+        $configuration ['data'] = VrCategories::find($id)->toArray();
+//dd( $configuration ['data']);
 
         return view('admin.adminForm', $configuration);
     }
@@ -107,7 +112,10 @@ class VrCategoriesController extends Controller
      */
     public function adminDestroy($id)
     {
-        //
+        VrCategoriesTranslations::destroy(VrCategoriesTranslations::where('record_id', $id)->pluck('id')->toArray());
+        VrCategories::destroy($id);
+
+        return json_encode(["success" => true, "id" => $id]);
     }
 
     /**
