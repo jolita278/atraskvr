@@ -136,6 +136,7 @@ class VrCategoriesController extends Controller
             "key" => "name",
             "label" => trans('app.name')
         ];
+
         return $configuration;
     }
 

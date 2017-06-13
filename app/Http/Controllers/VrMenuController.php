@@ -99,5 +99,37 @@ class VrMenuController extends Controller
 
 
     }
+    /**
+     * Get form fields data
+     *
+     * @return mixed
+     */
+    public function getFormFieldData()
+    {
+        $configuration['fields'][] = [
+            "type" => "drop_down",
+            "key" => "language_code",
+            "options" => getActiveLanguage(),
+            "label" => trans('app.languages')
+        ];
+        $configuration['fields'][] = [
+            "type" => "single_line",
+            "key" => "name",
+            "label" => trans('app.name')
+        ];
+        $configuration['fields'][] = [
+            "type" => "single_line",
+            "key" => "url",
+            //"label" => trans('app.url')
+        ];
+        $configuration['fields'][] = [
+            "type" => "check_box",
+            "key" => "new_window",
+            "options" => [],
+            //"label" => trans('app.new_window')
+        ];
+
+        return $configuration;
+    }
 
 }
