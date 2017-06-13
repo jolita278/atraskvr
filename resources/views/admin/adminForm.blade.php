@@ -22,7 +22,7 @@
             @endif
 
         @endforeach
-        {{ Form::submit(trans('app.submit')) }}
+        {{ Form::submit(trans('app.submit'), array("class" => 'btn')) }}
         {!! Form::close() !!}
     </div>
 @endsection
