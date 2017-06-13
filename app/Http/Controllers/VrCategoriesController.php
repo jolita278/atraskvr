@@ -57,12 +57,11 @@ class VrCategoriesController extends Controller
      */
     public function adminStore()
     {
-        $record = VrCategories:: create();
         $data = request()->all();
-        $data['record_id'] = $record->id;
-
+        $data['record_id'] = (VrCategories::create())->id;
         VrCategoriesTranslations::create($data);
-        return redirect('/admin/categories/');
+
+        return redirect(route('app.categories.edit',  $data['record_id']));
     }
 
     /**
