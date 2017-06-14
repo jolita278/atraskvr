@@ -32,7 +32,7 @@ return [
     "sequence" => "Eiliškumas",
     "yes" =>"Taip",
     "parent" => "Tėvinis meniu punktas",
-
+    "choose" => "'Pasirinkite..'",
 
     "inspired_by" => "Parodą įkvepia:",
     "main_title" => "Atrask VR",

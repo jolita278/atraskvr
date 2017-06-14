@@ -87,7 +87,14 @@ class VrMenuController extends Controller
      */
     public function adminEdit($id)
     {
+        $configuration = $this->getFormFieldData();
+        $configuration ['url'] = route('app.menu.edit', $id);
+        $configuration ['title_name'] = trans('app.edit_record');
+        $configuration ['title'] = trans('app.menus');
+        $configuration['back_to_list'] = route('app.menu.index');
+        $configuration ['data'] = VrMenu::find($id)->toArray();
 
+        return view('admin.adminForm', $configuration);
     }
 
     /**

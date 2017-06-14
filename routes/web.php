@@ -36,8 +36,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'NotAdminRestriction
         Route::group(['prefix' => '{id}'], function () {
 
             Route::get('/', ['as' => 'app.menu.show', 'uses' => 'VrMenuController@adminShow']);
-            Route::get('/edit', ['as' => 'app.menu.edit', 'uses' => 'VrMenuController@adminEdit']);
-            Route::post('/edit', ['uses' => 'VrMenuController@adminUpdate']);
+            Route::get('/edit/{lang?}', ['as' => 'app.menu.edit', 'uses' => 'VrMenuController@adminEdit']);
+            Route::post('/edit/{lang?}', ['uses' => 'VrMenuController@adminUpdate']);
             Route::delete('/delete', ['as' => 'app.menu.destroy', 'uses' => 'VrMenuController@adminDestroy']);
         });
 

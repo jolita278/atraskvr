@@ -32,6 +32,7 @@ return [
     "sequence" => "Sequence",
     "yes" =>"Yes",
     "parent" => "Parent menu item",
+    "choose" => "'Choose..'",
 
     "inspired_by" => "Inspired by:",
     "main_title" => "Discover VR",

@@ -11,13 +11,13 @@
             @if ($field['type'] == 'drop_down')
                 {{Form::label($field['key'], $field['label'])}}
                 <br>
-                {{Form::select($field['key'],$field['options']/*,$data['translation']['language_code']*/)}}
+                {{Form::select($field['key'], $field['options'],null,
+    ['class' => 'form-control', 'placeholder' => 'Please Select']/*, $data['translation']['language_code']*/)}}
                 <br><br>
-
             @elseif($field['type'] == 'single_line')
                 {{Form::label($field['key'], $field['label'])}}
                 <br>
-                {{Form::text($field['key']/*,$data['translation']['name']*/)}}
+                {{Form::text($field['key'],null,['class' => 'form-control']/*,$data['translation']['name']*/)}}
                 <br><br>
             @elseif($field['type'] == 'check_box')
                 @if(isset($field['key']))
@@ -38,3 +38,12 @@
 
     </div>
 @endsection
+{{--
+@section('scripts')
+    <script>
+        var $languageDropDown = $("[name='language_code']");
+        $languageDropDown.bind('change', function () {
+            location.href = "/admin/menu/edit/" + $languageDropDown.val();
+        });
+    </script>
+@endsection--}}
