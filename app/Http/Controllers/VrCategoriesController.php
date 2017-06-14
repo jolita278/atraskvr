@@ -20,7 +20,6 @@ class VrCategoriesController extends Controller
     {
         $configuration ['title'] = trans('app.categories_list');
         $configuration ['list'] = VrCategories::get()->toArray();
-
         $configuration ['new'] = route('app.categories.create');
         $configuration ['edit'] = 'app.categories.edit';
         $configuration ['showDelete'] ='app.categories.destroy';

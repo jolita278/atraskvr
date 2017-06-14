@@ -12,7 +12,6 @@ use Session;
 
 class VrMenuController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      * GET /vrmenu
@@ -23,7 +22,11 @@ class VrMenuController extends Controller
     {
         $configuration ['title'] = trans('app.menu_list');
         $configuration ['list'] = VrMenu::get()->toArray();
-        $configuration ['new'] = url('admin/menu/create');
+        $configuration ['new'] = route('app.menu.create');
+        $configuration ['edit'] = 'app.menu.edit';
+        $configuration ['showDelete'] = 'app.menu.destroy';
+
+
         return view('admin.adminList', $configuration);
     }
 
@@ -35,7 +38,13 @@ class VrMenuController extends Controller
      */
     public function adminCreate()
     {
-        return view('admin.adminForm');
+        $configuration = $this->getFormFieldData();
+        $configuration ['title_name'] = trans('app.new_record');
+        $configuration ['title'] = trans('app.menus');
+        $configuration ['url'] = route('app.menu.create');
+        $configuration ['back_to_list'] = route('app.menu.index');
+        return view('admin.adminForm', $configuration);
+
     }
 
     /**
@@ -48,7 +57,13 @@ class VrMenuController extends Controller
 
     public function adminStore()
     {
-//
+//        dd(request()->all());
+
+        $data = request()->all();
+        $data['record_id'] = (VrMenu::create($data))->id;
+        VrmenuTranslations::create($data);
+
+        return redirect(route('app.menu.edit', $data['record_id']));
     }
 
     /**
@@ -96,9 +111,13 @@ class VrMenuController extends Controller
      */
     public function adminDestroy($id)
     {
+        VrmenuTranslations::destroy(VrmenuTranslations::where('record_id', $id)->pluck('id')->toArray());
+        VrMenu::destroy($id);
 
+        return json_encode(["success" => true, "id" => $id]);
 
     }
+
     /**
      * Get form fields data
      *
@@ -120,14 +139,32 @@ class VrMenuController extends Controller
         $configuration['fields'][] = [
             "type" => "single_line",
             "key" => "url",
-            //"label" => trans('app.url')
+            "label" => trans('app.url')
         ];
         $configuration['fields'][] = [
             "type" => "check_box",
             "key" => "new_window",
-            "options" => [],
-            //"label" => trans('app.new_window')
+            "options" => [
+                [
+                    "name" => "new_window",
+                    "value" => "1",
+                    "title" => trans('app.yes'),
+                ],
+            ],
+            "label" => trans('app.new_window')
         ];
+        $configuration['fields'][] = [
+            "type" => "single_line",
+            "key" => "sequence",
+            "label" => trans('app.sequence')
+        ];
+        $configuration['fields'][] = [
+            "type" => "drop_down",
+            "key" => "parent_id",
+            "options" => VrMenuTranslations::pluck('name', 'record_id')->toArray(),
+            "label" => trans('app.parent')
+        ];
+
 
         return $configuration;
     }
