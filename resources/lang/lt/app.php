@@ -27,6 +27,11 @@ return [
     "edit_record" => "Koreguoti: ",
     "delete" => "Ištrinti",
     "back_to_list" => "Grįžti į sąrašą",
+    "new_window" => "Atidaryti naujame lange?",
+    "url" => "Nuoroda",
+    "sequence" => "Eiliškumas",
+    "yes" =>"Taip",
+    "parent" => "Tėvinis meniu punktas",
 
 
     "inspired_by" => "Parodą įkvepia:",
