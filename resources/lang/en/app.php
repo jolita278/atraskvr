@@ -27,7 +27,7 @@ return [
     "edit_record" => "Edit: ",
     "delete" => "Delete",
     "back_to_list" => "Back to list",
-    "new_window" => "Show in new window?",
+    "new_window" => "Show in new window",
     "url" => "Slug",
     "sequence" => "Sequence",
     "yes" =>"Yes",

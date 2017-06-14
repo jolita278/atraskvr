@@ -143,12 +143,11 @@ class VrMenuController extends Controller
         ];
         $configuration['fields'][] = [
             "type" => "check_box",
-            "key" => "new_window",
             "options" => [
                 [
                     "name" => "new_window",
                     "value" => "1",
-                    "title" => trans('app.yes'),
+                    "title" => trans('app.new_window'),
                 ],
             ],
             "label" => trans('app.new_window')

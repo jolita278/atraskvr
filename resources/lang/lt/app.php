@@ -27,7 +27,7 @@ return [
     "edit_record" => "Koreguoti: ",
     "delete" => "Ištrinti",
     "back_to_list" => "Grįžti į sąrašą",
-    "new_window" => "Atidaryti naujame lange?",
+    "new_window" => "Atidaryti naujame lange",
     "url" => "Nuoroda",
     "sequence" => "Eiliškumas",
     "yes" =>"Taip",
