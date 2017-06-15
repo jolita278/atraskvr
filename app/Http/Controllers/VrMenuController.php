@@ -87,13 +87,16 @@ class VrMenuController extends Controller
      */
     public function adminEdit($id)
     {
-
         $configuration = $this->getFormFieldData();
         $configuration ['url'] = route('app.menu.edit', $id);
         $configuration ['title_name'] = trans('app.edit_record');
         $configuration ['title'] = trans('app.menus');
-        $configuration['back_to_list'] = route('app.menu.index');
+        $configuration ['back_to_list'] = route('app.menu.index');
+
         $configuration ['data'] = VrMenu::find($id)->toArray();
+        $configuration ['data']['name'] = $configuration ['data']['translation']['name'];
+        $configuration ['data']['url'] = $configuration ['data']['translation']['url'];
+        $configuration ['data']['language_code'] = $configuration ['data']['translation']['language_code'];
 
         return view('admin.adminForm', $configuration);
     }
@@ -134,7 +137,7 @@ class VrMenuController extends Controller
     public function getFormFieldData()
     {
         $language = request('language_code');
-        if($language == null)
+        if ($language == null)
             $language = app()->getLocale();
 
         $configuration['fields'][] = [
@@ -150,8 +153,8 @@ class VrMenuController extends Controller
         ];
         $configuration['fields'][] = [
             "type" => "drop_down",
-            "key" => "parent_id",
-            "options" => VrMenuTranslations::where('language_code',$language )->pluck('name', 'record_id')->toArray(),
+            "key" => "vr_parent_id",
+            "options" => VrMenuTranslations::where('language_code', $language)->pluck('name', 'record_id')->toArray(),
             "label" => trans('app.parent')
         ];
         $configuration['fields'][] = [

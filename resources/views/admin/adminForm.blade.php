@@ -12,31 +12,39 @@
                 {{Form::label($field['key'], $field['label'])}}
                 <br>
 
-                @if(isset($data['translation']['language_code']))
+                @if(isset($data[$field['key']]))
 
-                    {{Form::select($field['key'], $field['options'],['class' => 'form-control']/*,$data['translation']['language_code']*/)}}
-                    <br><br>
-
-                @elseif($field['key'] != 'language_code')
-
-                    {{Form::select($field['key'], $field['options'],null,['class' => 'form-control', 'placeholder' => 'Please Select'])}}
+                    @if($field['key'] == 'language_code')
+                        {{Form::select($field['key'], $field['options'], $data[$field['key']], ['class' => 'form-control'])}}
+                    @else
+                        {{Form::select($field['key'], $field['options'], $data[$field['key']], ['class' => 'form-control', 'placeholder' => 'Please Select'])}}
+                    @endif
 
                 @else
-                    {{Form::select($field['key'], $field['options'],null,['class' => 'form-control'])}}
+
+                    @if($field['key'] == 'language_code')
+                        {{Form::select($field['key'], $field['options'], null, ['class' => 'form-control'])}}
+                    @else
+                        {{Form::select($field['key'], $field['options'], null, ['class' => 'form-control', 'placeholder' => 'Please Select'])}}
+                    @endif
                 @endif
+
+                <br><br>
 
 
             @elseif($field['type'] == 'single_line')
                 {{Form::label($field['key'], $field['label'])}}
                 <br>
-                @if(isset($data['translation']['name']))
-                    {{Form::text($field['key'],null,['class' => 'form-control']/*,$data['translation']['name']*/)}}
+                @if(isset($data[$field['key']]))
+
+                    {{Form::text($field['key'],$data[$field['key']],['class' => 'form-control'])}}
                     <br><br>
                 @else
                     {{Form::text($field['key'],null,['class' => 'form-control'])}}
                 @endif
 
             @elseif($field['type'] == 'check_box')
+
                 @if(isset($field['key']))
                     {{Form::label($field['key'], $field['label'])}}
                     <br>
@@ -61,8 +69,8 @@
 @section('scripts')
     <script>
 
-        $('#language_code').bind('change', function(){
-            window.location.href = "?language_code="+$('#language_code').val();
+        $('#language_code').bind('change', function () {
+            window.location.href = "?language_code=" + $('#language_code').val();
         });
     </script>
 @endsection
