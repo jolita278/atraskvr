@@ -14,7 +14,7 @@
 
                 @if(isset($data['translation']['language_code']))
 
-                    {{Form::select($field['key'], $field['options'],['class' => 'form-control'],$data['translation']['language_code'])}}
+                    {{Form::select($field['key'], $field['options'],['class' => 'form-control']/*,$data['translation']['language_code']*/)}}
                     <br><br>
 
                 @elseif($field['key'] != 'language_code')
@@ -24,6 +24,7 @@
                 @else
                     {{Form::select($field['key'], $field['options'],null,['class' => 'form-control'])}}
                 @endif
+
 
             @elseif($field['type'] == 'single_line')
                 {{Form::label($field['key'], $field['label'])}}
