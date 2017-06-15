@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="487b19de-3171-441b-9267-ae8e8ba332ca" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/VrMenuController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/VrMenuController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/helpers.php" afterPath="$PROJECT_DIR$/app/Http/helpers.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/VrMenu.php" afterPath="$PROJECT_DIR$/app/Models/VrMenu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/en/app.php" afterPath="$PROJECT_DIR$/resources/lang/en/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/lt/app.php" afterPath="$PROJECT_DIR$/resources/lang/lt/app.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/adminForm.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/adminForm.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,12 +17,12 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="VrMenuController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/VrMenuController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="26" column="59" lean-forward="true" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+            <state relative-caret-position="776">
+              <caret line="175" column="0" lean-forward="true" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -33,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/app/Models/VrMenu.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+              <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -49,34 +48,68 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminForm.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adminForm.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/adminForm.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="23" column="67" lean-forward="true" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
+            <state relative-caret-position="504">
+              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
-                <marker date="1497441193234" expanded="true" signature="9:26" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="38:49" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="94:105" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="109:115" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="135:164" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="272:315" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="357:518" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="370:517" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="617:660" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="702:793" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="936:979" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="1084:1157" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="1084:1159" ph="{...}" />
-                <marker date="1497441193234" expanded="true" signature="1107:1157" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="1161:1177" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="1288:1321" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="1288:1348" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="1370:1383" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="1427:1452" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="1470:1485" ph="..." />
-                <marker date="1497441193234" expanded="true" signature="1528:1537" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="9:26" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="38:49" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="94:105" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="109:115" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="135:164" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="272:315" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="429:540" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="429:541" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="442:540" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="655:768" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="816:895" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="993:1036" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="1139:1226" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="1302:1360" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="1501:1544" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="1674:1747" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="1674:1749" ph="{...}" />
+                <marker date="1497508877714" expanded="true" signature="1697:1747" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="1751:1767" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="1878:1911" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="1878:1938" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="1960:1973" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="2017:2042" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="2060:2075" ph="..." />
+                <marker date="1497508877714" expanded="true" signature="2118:2127" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="helpers.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/helpers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Application.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="1055" column="20" lean-forward="false" selection-start-line="1055" selection-start-column="20" selection-end-line="1055" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/app.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="79" column="19" lean-forward="false" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -85,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/resources/lang/en/app.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+              <caret line="18" column="47" lean-forward="false" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -95,7 +128,7 @@
         <entry file="file://$PROJECT_DIR$/resources/lang/lt/app.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="572">
-              <caret line="34" column="17" lean-forward="true" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+              <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -143,10 +176,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/VrResourcesController.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/resources/views/admin/adminMenusCreate.blade.php" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
-        <option value="$PROJECT_DIR$/app/Http/helpers.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/resources/views/admin/adminPagesCreate.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/VrCategories.php" />
-        <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/app/Http/Controllers/VRPagesController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/adminBase.blade.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/resources/views/admin/adminList.blade.php" />
@@ -156,10 +187,12 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/VrCategoriesController.php" />
         <option value="$PROJECT_DIR$/app/Models/VrMenu.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/VrMenuController.php" />
         <option value="$PROJECT_DIR$/resources/lang/lt/app.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/app.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/VrMenuController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/adminForm.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/helpers.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
       </list>
     </option>
   </component>
@@ -173,9 +206,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="209" />
-    <option name="y" value="460" />
-    <option name="width" value="1932" />
+    <option name="x" value="611" />
+    <option name="y" value="78" />
+    <option name="width" value="1626" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -194,6 +227,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -364,6 +398,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atraskvr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atraskvr" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -429,7 +477,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -541,18 +588,19 @@
       <workItem from="1496987755167" duration="15710000" />
       <workItem from="1497253315621" duration="14932000" />
       <workItem from="1497333960287" duration="18667000" />
-      <workItem from="1497420239914" duration="17926000" />
+      <workItem from="1497420239914" duration="18010000" />
+      <workItem from="1497505835257" duration="6050000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97807000" />
+    <option name="totallyTimeSpent" value="103941000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="209" y="460" width="1932" height="1056" extended-state="0" />
+    <frame x="611" y="78" width="1626" height="1056" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.164405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16397515" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -585,15 +633,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/resources/views/admin/adminJS.blade.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_05_23_080808_create_vr_menu_translations_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/VrLanguageCodes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -606,7 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="28" column="61" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -614,7 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -622,7 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -630,7 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -638,7 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -717,7 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -730,62 +763,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/app/Http/Controllers/VRUsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="81" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/resources/views/admin/adminUsersEdit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="112" column="79" lean-forward="true" selection-start-line="112" selection-start-column="79" selection-end-line="112" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/app/Models/VRPages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/resources/views/admin/adminPagesEdit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/resources/views/admin/adminPagesCreate.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/app/Http/Controllers/VRPagesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="147" column="5" lean-forward="true" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/resources/views/admin/adminList.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="989">
-          <caret line="100" column="6" lean-forward="true" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/app/Http/Controllers/VRUsersController.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/resources/views/admin/adminUsersEdit.blade.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/app/Models/VRPages.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/resources/views/admin/adminPagesEdit.blade.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/resources/views/admin/adminPagesCreate.blade.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/app/Http/Controllers/VRPagesController.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_atraskvr_team_b-master.zip/atraskvr_team_b-master/resources/views/admin/adminList.blade.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/admin/adminBase.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -856,7 +840,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -864,7 +847,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -872,7 +854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="21" column="39" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="21" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -884,18 +865,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="52" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/VrCategoriesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
           <caret line="68" column="10" lean-forward="true" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/4cb2fd5cd1d96da1fd577783d79793e9cd18c3f5.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="147" lean-forward="false" selection-start-line="20" selection-start-column="147" selection-end-line="20" selection-end-column="147" />
           <folding />
         </state>
       </provider>
@@ -911,7 +892,65 @@
     <entry file="file://$PROJECT_DIR$/resources/lang/lt/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
-          <caret line="34" column="17" lean-forward="true" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+          <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/VrMenuController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="776">
+          <caret line="175" column="0" lean-forward="true" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/adminForm.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <marker date="1497508877714" expanded="true" signature="9:26" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="38:49" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="94:105" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="109:115" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="135:164" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="272:315" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="429:540" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="429:541" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="442:540" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="655:768" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="816:895" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="993:1036" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="1139:1226" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="1302:1360" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="1501:1544" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="1674:1747" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="1674:1749" ph="{...}" />
+            <marker date="1497508877714" expanded="true" signature="1697:1747" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="1751:1767" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="1878:1911" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="1878:1938" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="1960:1973" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="2017:2042" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="2060:2075" ph="..." />
+            <marker date="1497508877714" expanded="true" signature="2118:2127" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/VrMenu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="79" column="19" lean-forward="false" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -919,54 +958,24 @@
     <entry file="file://$PROJECT_DIR$/resources/lang/en/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <caret line="18" column="47" lean-forward="false" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/VrMenuController.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="59" lean-forward="true" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+        <state relative-caret-position="256">
+          <caret line="1055" column="20" lean-forward="false" selection-start-line="1055" selection-start-column="20" selection-end-line="1055" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/VrMenu.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        <state relative-caret-position="340">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/adminForm.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="23" column="67" lean-forward="true" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
-          <folding>
-            <marker date="1497441193234" expanded="true" signature="9:26" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="38:49" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="94:105" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="109:115" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="135:164" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="272:315" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="357:518" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="370:517" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="617:660" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="702:793" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="936:979" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="1084:1157" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="1084:1159" ph="{...}" />
-            <marker date="1497441193234" expanded="true" signature="1107:1157" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="1161:1177" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="1288:1321" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="1288:1348" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="1370:1383" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="1427:1452" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="1470:1485" ph="..." />
-            <marker date="1497441193234" expanded="true" signature="1528:1537" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>

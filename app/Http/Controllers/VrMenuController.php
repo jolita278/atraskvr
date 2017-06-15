@@ -144,9 +144,20 @@ class VrMenuController extends Controller
             "label" => trans('app.name')
         ];
         $configuration['fields'][] = [
+            "type" => "drop_down",
+            "key" => "parent_id",
+            "options" => VrMenuTranslations::pluck('name', 'record_id')->toArray(),
+            "label" => trans('app.parent')
+        ];
+        $configuration['fields'][] = [
             "type" => "single_line",
             "key" => "url",
             "label" => trans('app.url')
+        ];
+        $configuration['fields'][] = [
+            "type" => "single_line",
+            "key" => "sequence",
+            "label" => trans('app.sequence')
         ];
         $configuration['fields'][] = [
             "type" => "check_box",
@@ -159,18 +170,6 @@ class VrMenuController extends Controller
             ],
             "label" => trans('app.new_window')
         ];
-        $configuration['fields'][] = [
-            "type" => "single_line",
-            "key" => "sequence",
-            "label" => trans('app.sequence')
-        ];
-        $configuration['fields'][] = [
-            "type" => "drop_down",
-            "key" => "parent_id",
-            "options" => VrMenuTranslations::pluck('name', 'record_id')->toArray(),
-            "label" => trans('app.parent')
-        ];
-
 
         return $configuration;
     }
