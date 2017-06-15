@@ -49,6 +49,7 @@
                     {{Form::label($field['key'], $field['label'])}}
                     <br>
                 @endif
+                    {{--TODO: set  checked check box value }}--}}
                 @foreach($field['options'] as $option)
                     <br>
                     {{ Form::checkbox($option['name'], $option['value'])}}{{$option['title']}}
