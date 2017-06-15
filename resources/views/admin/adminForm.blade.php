@@ -29,11 +29,12 @@
                 {{Form::label($field['key'], $field['label'])}}
                 <br>
                 @if(isset($data['translation']['name']))
-                    {{Form::text($field['key'],null,['class' => 'form-control'],$data['translation']['name'])}}
+                    {{Form::text($field['key'],null,['class' => 'form-control']/*,$data['translation']['name']*/)}}
                     <br><br>
                 @else
                     {{Form::text($field['key'],null,['class' => 'form-control'])}}
                 @endif
+
             @elseif($field['type'] == 'check_box')
                 @if(isset($field['key']))
                     {{Form::label($field['key'], $field['label'])}}
@@ -54,12 +55,13 @@
 
     </div>
 @endsection
-{{--
+
+
 @section('scripts')
     <script>
-        var $languageDropDown = $("[name='language_code']");
-        $languageDropDown.bind('change', function () {
-            location.href = "/admin/menu/edit/" + $languageDropDown.val();
+
+        $('#language_code').bind('change', function(){
+            window.location.href = "?language_code="+$('#language_code').val();
         });
     </script>
-@endsection--}}
+@endsection

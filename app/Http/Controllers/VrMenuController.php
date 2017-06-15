@@ -132,6 +132,10 @@ class VrMenuController extends Controller
      */
     public function getFormFieldData()
     {
+        $language = request('language_code');
+        if($language == null)
+            $language = app()->getLocale();
+
         $configuration['fields'][] = [
             "type" => "drop_down",
             "key" => "language_code",
@@ -146,7 +150,7 @@ class VrMenuController extends Controller
         $configuration['fields'][] = [
             "type" => "drop_down",
             "key" => "parent_id",
-            "options" => VrMenuTranslations::pluck('name', 'record_id')->toArray(),
+            "options" => VrMenuTranslations::where('language_code',$language )->pluck('name', 'record_id')->toArray(),
             "label" => trans('app.parent')
         ];
         $configuration['fields'][] = [
