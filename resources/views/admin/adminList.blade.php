@@ -59,7 +59,7 @@
                                             {{$value['title']. ' '.$value['language_code'] }}
                                         @endif
 
-                                    @elseif($key == 'cover')
+                                    @elseif($key == 'covers')
                                         @if(isset($value['path']))
 
                                         <img src="{{asset($value['path'])}}" class="img-rounded" width="200">

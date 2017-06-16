@@ -27,7 +27,7 @@ class VrPages extends CoreModel
         return $this->hasOne(VrPagesTranslations::class, 'record_id', 'id')->where('language_code',$lang);
     }
 
-    public function cover(){
+    public function covers(){
 
         return $this->hasOne(VrResources::class, 'id', 'cover_id');
     }
