@@ -19,12 +19,11 @@ class VrPagesController extends Controller {
 	public function adminIndex()
 	{
         $configuration ['title'] = trans('app.pages_list');
-        $configuration ['list'] = VrPages::/*with(['cover'])->*/get()->toArray();
+        $configuration ['list'] = VrPages::with('covers')->get()->toArray();
         $configuration ['new'] = route('app.pages.create');
         $configuration ['edit'] = 'app.pages.edit';
         $configuration ['showDelete'] = 'app.pages.destroy';
         $config['cover'] = VrResources::all()->pluck('path', 'id')->toArray();
-        dd($configuration);
         return view('admin.adminList', $configuration);
 	}
 
