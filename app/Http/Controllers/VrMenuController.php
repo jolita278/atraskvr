@@ -26,7 +26,6 @@ class VrMenuController extends Controller
         $configuration ['edit'] = 'app.menu.edit';
         $configuration ['showDelete'] = 'app.menu.destroy';
 
-
         return view('admin.adminList', $configuration);
     }
 

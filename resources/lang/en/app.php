@@ -33,6 +33,10 @@ return [
     "yes" =>"Yes",
     "parent" => "Parent menu item",
     "choose" => "'Choose..'",
+    "title" => "Title",
+    "slug" => "Slug",
+    "description_short" => "Short description",
+    "description_long" => "Long description",
 
     "inspired_by" => "Inspired by:",
     "main_title" => "Discover VR",

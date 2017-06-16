@@ -15,6 +15,8 @@ class CoreModel extends Model
      */
     public $incrementing = false;
 
+    public $hidden = ['deleted_at'];
+
     /**
      * Generates UUID if doesn't exist in entry
      *

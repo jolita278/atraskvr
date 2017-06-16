@@ -33,6 +33,10 @@ return [
     "yes" =>"Taip",
     "parent" => "Tėvinis meniu punktas",
     "choose" => "'Pasirinkite..'",
+    "title" => "Pavadinimas",
+    "slug" => "Nuoroda",
+    "description_short" => "Trumpas aprašymas",
+    "description_long" => "Ilgas aprašymas",
 
     "inspired_by" => "Parodą įkvepia:",
     "main_title" => "Atrask VR",
