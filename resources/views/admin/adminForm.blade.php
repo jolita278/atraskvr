@@ -42,6 +42,18 @@
                     {{Form::text($field['key'],null,['class' => 'form-control'])}}
                 @endif
 
+            @elseif($field['type'] == 'text_area')
+                {{Form::label($field['key'], $field['label'])}}
+                <br>
+                @if(isset($data[$field['key']]))
+
+                    {{Form::textarea($field['key'],$data[$field['key']],['class' => 'form-control'])}}
+                    <br><br>
+                @else
+                    {{Form::textarea($field['key'],null,['class' => 'form-control'])}}
+                @endif
+                <br><br>
+
             @elseif($field['type'] == 'check_box')
 
                 @if(isset($field['key']))
@@ -78,14 +90,14 @@
                                 {{ Form::checkbox($option['name'], $option['value'])}}
                             @endif
                         @else
-                                {{ Form::checkbox($option['name'], $option['value'])}}
+                            {{ Form::checkbox($option['name'], $option['value'])}}
                         @endif
 
                     @endif
-                        <br>
+                    <br>
 
                 @endforeach
-                    <br>
+                <br>
 
             @endif
 

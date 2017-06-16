@@ -52,8 +52,12 @@
 
                                         @endif
                                     @elseif($key == 'translation')
+                                        @if(isset($value['name']))
 
-                                        {{$value['name']. ' '.$value['language_code'] }}
+                                            {{$value['name']. ' '.$value['language_code'] }}
+                                        @else
+                                            {{$value['title']. ' '.$value['language_code'] }}
+                                        @endif
 
                                     @else
 
@@ -63,18 +67,18 @@
                                 </td>
                             @endforeach
 
-                                @if(isset($edit))
+                            @if(isset($edit))
 
-                                    <td><a href="{{route($edit, [$record['id'], app()->getLocale()])}}"
-                                           class="btn btn-default btn-sm">{{trans('app.edit_record')}}</a>
-                                    </td>
-                                @endif
-                                @if(isset($showDelete))
+                                <td><a href="{{route($edit, [$record['id'], app()->getLocale()])}}"
+                                       class="btn btn-default btn-sm">{{trans('app.edit_record')}}</a>
+                                </td>
+                            @endif
+                            @if(isset($showDelete))
 
-                                    <td><a onclick="deleteItem('{{route($showDelete, $record['id'])}}')"
-                                           class="btn btn-info btn-sm">{{trans('app.delete')}}</a>
-                                    </td>
-                                @endif
+                                <td><a onclick="deleteItem('{{route($showDelete, $record['id'])}}')"
+                                       class="btn btn-info btn-sm">{{trans('app.delete')}}</a>
+                                </td>
+                            @endif
 
                         </tr>
 
