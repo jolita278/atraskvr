@@ -19,11 +19,12 @@ class VrPagesController extends Controller {
 	public function adminIndex()
 	{
         $configuration ['title'] = trans('app.pages_list');
-        $configuration ['list'] = VrPages::get()->toArray();
+        $configuration ['list'] = VrPages::/*with(['cover'])->*/get()->toArray();
         $configuration ['new'] = route('app.pages.create');
         $configuration ['edit'] = 'app.pages.edit';
         $configuration ['showDelete'] = 'app.pages.destroy';
-
+        $config['cover'] = VrResources::all()->pluck('path', 'id')->toArray();
+        dd($configuration);
         return view('admin.adminList', $configuration);
 	}
 
@@ -53,6 +54,7 @@ class VrPagesController extends Controller {
 	public function adminStore()
 	{
         $data = request()->all();
+        dd($data);
         $data['record_id'] = (VrPages::create($data))->id;
         VrPagesTranslations::create($data);
 
@@ -175,9 +177,10 @@ class VrPagesController extends Controller {
             "label" => trans('app.description_long')
         ];
         $configuration['fields'][] = [
-            "type" => "file_upload",
+            "type" => "drop_down",
             "key" => "cover_id",
-            "label" => trans('app.cover_id')
+            "options" => VrResources::pluck('path', 'id')->toArray(),
+            "label" => trans('app.cover')
         ];
 
         return $configuration;
