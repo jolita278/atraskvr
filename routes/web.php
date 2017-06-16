@@ -57,7 +57,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'NotAdminRestriction
     Route::group(['prefix' => 'resources'], function () {
         Route::get('/', ['as' => 'app.resources.index', 'uses' => 'VrResourcesController@adminIndex']);
         Route::get('/create', ['as' => 'app.resources.create', 'uses' => 'VrResourcesController@adminCreate']);
-        Route::post('/create', ['uses' => 'VrResourcesController@adminStore']);
+        Route::post('/create', ['as' => 'app.resources.store','uses' => 'VrResourcesController@adminStore']);
         Route::group(['prefix' => '{id}'], function () {
             Route::get('/', ['as' => 'app.resources.show', 'uses' => 'VrResourcesController@adminShow']);
             Route::get('/edit', ['as' => 'app.resources.edit', 'uses' => 'VrResourcesController@adminEdit']);

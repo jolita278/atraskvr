@@ -37,6 +37,9 @@ return [
     "slug" => "Nuoroda",
     "description_short" => "Trumpas aprašymas",
     "description_long" => "Ilgas aprašymas",
+    "cover" => "Viršelio nuotrauka",
+    "no_config" => "Nėra konufigūracijos!",
+    "file_upload" => "Failų įkėlimas: ",
 
     "inspired_by" => "Parodą įkvepia:",
     "main_title" => "Atrask VR",

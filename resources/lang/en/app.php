@@ -37,6 +37,10 @@ return [
     "slug" => "Slug",
     "description_short" => "Short description",
     "description_long" => "Long description",
+    "cover" => "Cover photo",
+    "no_config" => "No configuration!",
+    "file_upload" => "File upload: ",
+
 
     "inspired_by" => "Inspired by:",
     "main_title" => "Discover VR",

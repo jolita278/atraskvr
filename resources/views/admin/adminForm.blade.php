@@ -5,7 +5,18 @@
 
         <h2>{{$title_name}}{{$title}}</h2>
 
-        {!! Form::open(['url' => $url]) !!}
+        @if(isset($url))
+            {!! Form::open(['url' => $url]) !!}
+
+        @else
+            {!! Form::open(
+        array(
+        'route' => 'app.resources.store',
+        'class' => 'form',
+        'novalidate' => 'novalidate',
+        'files' => true))
+        !!}
+        @endif
 
         @foreach ($fields as $field)
             @if ($field['type'] == 'drop_down')
@@ -98,10 +109,14 @@
 
                 @endforeach
                 <br>
-
+            @elseif($field['type'] == 'file_upload')
+                <div class="form-group">
+                    {!! Form::file('image', null) !!}
+                </div>
             @endif
 
         @endforeach
+
         {{ Form::submit(trans('app.submit'), array("class" => 'btn')) }}
         <a href="{{$back_to_list}}" class="btn btn-primary"
            role="button">{{trans('app.back_to_list')}}</a>
