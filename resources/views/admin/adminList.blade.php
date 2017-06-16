@@ -62,11 +62,15 @@
                                     @elseif($key == 'covers')
                                         @if(isset($value['path']))
 
-                                        <img src="{{asset($value['path'])}}" class="img-rounded" width="200">
+                                            <img src="{{asset($value['path'])}}" class="img-rounded" width="200">
 
                                         @else
-                                           {{"No path!"}}
+                                            {{"No image!"}}
                                         @endif
+                                    @elseif($key == 'path')
+
+                                        <img src="{{asset($value)}}" class="img-rounded" width="200">
+                                        <div>{{$value}}</div>
 
                                     @else
 
