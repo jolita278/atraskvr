@@ -22,7 +22,7 @@ class VrCategoriesController extends Controller
         $configuration ['list'] = VrCategories::get()->toArray();
         $configuration ['new'] = route('app.categories.create');
         $configuration ['edit'] = 'app.categories.edit';
-        $configuration ['showDelete'] ='app.categories.destroy';
+        $configuration ['showDelete'] = 'app.categories.destroy';
         return view('admin.adminList', $configuration);
     }
 
@@ -85,6 +85,8 @@ class VrCategoriesController extends Controller
         $configuration['back_to_list'] = route('app.categories.index');
 
         $configuration ['data'] = VrCategories::find($id)->toArray();
+        $configuration ['data']['name'] = $configuration ['data']['translation']['name'];
+
 //dd( $configuration ['data']);
 
         return view('admin.adminForm', $configuration);
@@ -99,7 +101,21 @@ class VrCategoriesController extends Controller
      */
     public function adminUpdate($id)
     {
-        //
+        $data = request()->all();
+        $record = VrCategories::find($id);
+        $record->update($data);
+
+        $translation = VrCategoriesTranslations::where('record_id', $id)->get()
+            ->where('language_code', $data['language_code'])
+            ->first();
+        if ($translation) {
+            $translation->update($data);
+        } else {
+            $data['record_id'] = $record->id;
+            VrCategoriesTranslations::create($data);
+        }
+        return redirect(route('app.categories.edit', $record->id));
+
     }
 
     /**

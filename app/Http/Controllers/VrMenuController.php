@@ -108,8 +108,22 @@ class VrMenuController extends Controller
      * @param  int $id
      * @return Response
      */
-    public function adminUpdate(Request $request, $id)
+    public function adminUpdate($id)
     {
+        $data = request()->all();
+        $record = VrMenu::find($id);
+        $record->update($data);
+
+        $translation = VrmenuTranslations::where('record_id', $id)->get()
+            ->where('language_code', $data['language_code'])
+            ->first();
+        if ($translation) {
+            $translation->update($data);
+        } else {
+            $data['record_id'] = $record->id;
+            VrmenuTranslations::create($data);
+        }
+        return redirect(route('app.menu.edit',  $record->id));
 
     }
 
@@ -169,11 +183,12 @@ class VrMenuController extends Controller
         ];
         $configuration['fields'][] = [
             "type" => "check_box",
+            "key" => "new_window",
             "options" => [
                 [
                     "name" => "new_window",
                     "value" => "1",
-                    "title" => trans('app.new_window'),
+                    "title" => trans('app.yes'),
                 ],
             ],
             "label" => trans('app.new_window')

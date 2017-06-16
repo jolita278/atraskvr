@@ -31,7 +31,6 @@
 
                 <br><br>
 
-
             @elseif($field['type'] == 'single_line')
                 {{Form::label($field['key'], $field['label'])}}
                 <br>
@@ -46,20 +45,54 @@
             @elseif($field['type'] == 'check_box')
 
                 @if(isset($field['key']))
+
                     {{Form::label($field['key'], $field['label'])}}
                     <br>
                 @endif
-                    {{--TODO: set  checked check box value }}--}}
+
                 @foreach($field['options'] as $option)
-                    <br>
-                    {{ Form::checkbox($option['name'], $option['value'])}}{{$option['title']}}
-                    <br/><br>
+
+                    @if(isset($option['title']))
+
+                        @if(isset($data[$field['key']]))
+
+                            @if($data[$field['key']] == 1)
+                                {{ Form::checkbox($option['name'], $option['value'], true)}}{{$option['title']}}
+
+                            @else
+                                {{ Form::checkbox($option['name'], $option['value'])}}{{$option['title']}}
+                            @endif
+
+                        @else
+                            {{ Form::checkbox($option['name'], $option['value'])}}{{$option['title']}}
+
+                        @endif
+
+                    @else
+                        @if(isset($data[$field['key']]))
+
+                            @if($data[$field['key']] == 1)
+                                {{ Form::checkbox($option['name'], $option['value'], true)}}
+
+                            @else
+                                {{ Form::checkbox($option['name'], $option['value'])}}
+                            @endif
+                        @else
+                                {{ Form::checkbox($option['name'], $option['value'])}}
+                        @endif
+
+                    @endif
+                        <br>
+
                 @endforeach
+                    <br>
+
             @endif
 
         @endforeach
         {{ Form::submit(trans('app.submit'), array("class" => 'btn')) }}
-        <a href="{{$back_to_list}}" class="btn btn-primary" role="button">{{trans('app.back_to_list')}}</a>
+        <a href="{{$back_to_list}}" class="btn btn-primary"
+           role="button">{{trans('app.back_to_list')}}</a>
         {!! Form::close() !!}
 
 
